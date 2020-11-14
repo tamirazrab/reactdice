@@ -6,4 +6,4 @@ Cute little project, demonstrates changing states and action upon it.
 ## Todo's
 * Add number of wins on each side.
 * Track of total games played, with win and losses.
-* Change colour of dice depends on number of wins.x
+* Change colour of dice depends on number of wins.
