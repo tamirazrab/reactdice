@@ -37,8 +37,8 @@ class RollDice extends Component {
     return (
       <div className="RollDice">
         <div className="RollDice-container">
-          <Die faceValue={this.state.firstDice} />
-          <Die faceValue={this.state.secondDice} />
+          <Die faceValue={this.state.firstDice} isRolling ={this.state.isRolling} />
+          <Die faceValue={this.state.secondDice} isRolling ={this.state.isRolling} />
         </div>
         <button onClick={this.rollDice} disabled={this.state.isRolling}>
           {this.state.isRolling == true ? "Rolling..." : "Roll Dice"}
