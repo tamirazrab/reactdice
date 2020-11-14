@@ -9,7 +9,7 @@ class RollDice extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { firstDice: "one", secondDice: "one" };
+    this.state = { firstDice: "one", secondDice: "one", isRolling: false };
   }
 
   rollDice = () => {
@@ -24,7 +24,14 @@ class RollDice extends Component {
     this.setState({
       firstDice: newFirstRolledDice,
       secondDice: newSecondRolledDice,
+      isRolling: true,
     });
+
+    // waiting for time it takes to roll then setting isRolling state back
+    setTimeout(() => {
+      this.setState({ isRolling: false });
+    }, 1000);
+    
   };
   render() {
     return (
@@ -33,7 +40,9 @@ class RollDice extends Component {
           <Die faceValue={this.state.firstDice} />
           <Die faceValue={this.state.secondDice} />
         </div>
-        <button onClick={this.rollDice}>Roll Dice</button>
+        <button onClick={this.rollDice} disabled={this.state.isRolling}>
+          {this.state.isRolling == true ? "Rolling..." : "Roll Dice"}
+        </button>
       </div>
     );
   }
