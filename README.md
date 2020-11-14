@@ -1,7 +1,7 @@
 # reactdice
 Cute little project, demonstrates changing states and action upon it. 
 
-[https://i.ibb.co/PNbpg2v/Screenshot.png]
+![Two Dices Project](https://i.ibb.co/PNbpg2v/Screenshot.png)
 
 ## Todo's
 * Add number of wins on each side.
